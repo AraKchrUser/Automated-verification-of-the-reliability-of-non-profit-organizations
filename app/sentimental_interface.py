@@ -3,8 +3,9 @@ from collections import Counter
 
 
 class Sentimental:
-    def __init__(self, download):
-        self.model = build_model(configs.classifiers.rusentiment_elmo_twitter_cnn, download=download)
+    def __init__(self, model):
+        self.model = model
+        # self.model = build_model(configs.classifiers.rusentiment_elmo_twitter_cnn, download=download)
 
     def sentimental_get(self, text):
         return self.model([text])
