@@ -1,0 +1,1 @@
+sudo docker build -t jupyter . && sudo docker run --rm -p 8888:8888 jupyter
