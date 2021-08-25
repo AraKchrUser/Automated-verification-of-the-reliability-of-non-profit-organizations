@@ -1,0 +1,2 @@
+pandas~=0.25.3
+deeppavlov~=0.16.0
