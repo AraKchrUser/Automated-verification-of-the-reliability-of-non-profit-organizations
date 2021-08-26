@@ -1,0 +1,3 @@
+deeppavlov~=0.16.0
+TensorFlow~=1.15
+tensorflow-hub
