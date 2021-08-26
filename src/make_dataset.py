@@ -1,4 +1,10 @@
 import pandas as pd
+import sklearn
+
+
+def learning_and_plot_model():
+    pass
+
 
 if __name__ == "__main__":
 
@@ -16,4 +22,9 @@ if __name__ == "__main__":
 
     # Файл docker содержит данные - результаты обраотки новостей, отзывов  т. д.
     news_sentimental = pd.read_csv('../docker/save_file/news_summarization.csv')
+
     # merge
+    # dataset = data.merge(news_sentimental, on='key')
+    # learning_and_plot_model(dataset)
+
+
