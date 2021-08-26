@@ -7,7 +7,7 @@ VOLUME /save_file
 RUN apt-get update && apt-get install -y \
 	python3.6 \
 	python3-pip
-RUN pip3 install -r /pip_docker/pp.txt
+RUN pip3 install -r /pip_docker/dockerpip.txt
 
 EXPOSE 8888
 
