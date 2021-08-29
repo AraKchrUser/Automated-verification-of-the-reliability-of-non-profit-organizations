@@ -11,4 +11,5 @@ RUN pip3 install -r /pip_docker/dockerpip.txt
 
 EXPOSE 8888
 
+#CMD ["/bin/bash"]
 CMD ["/bin/bash", "-c", "jupyter notebook --ip='0.0.0.0' --port=8888 --no-browser --allow-root"]

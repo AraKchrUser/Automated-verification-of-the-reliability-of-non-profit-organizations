@@ -1,0 +1,2 @@
+sudo docker build -t sent . && sudo docker run -ti -v <abs path>/save_file:/save_file --rm sent
+sudo docker cp 09c62a1ceb3b:./save_file/save.txt ./docker

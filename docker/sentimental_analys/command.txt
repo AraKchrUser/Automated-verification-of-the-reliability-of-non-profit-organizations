@@ -1,4 +1,12 @@
-sudo docker build -t sent . && sudo docker run -v <abs path>/save_file:/save_file --rm sent
-
+sudo docker build -t sent . && sudo docker run -ti -v <abs path>/save_file:/save_file --rm sent
 sudo docker cp 09c62a1ceb3b:./save_file/save.txt ./docker
+
+comm#:
+ apt-get install tar
+
+ mkdir -p /root/.deeppavlov/models/classifiers
+ tar -xzvf rusentiment_v10.tar.gz -C /root/.deeppavlov/models/classifiers
+
+ mkdir -p /root/.deeppavlov/downloads/rusentiment/
+ tar -xzvf elmo_ru-twitter_2013-01_2018-04_600k_steps.tar.gz -C /root/.deeppavlov/downloads/rusentiment
 
