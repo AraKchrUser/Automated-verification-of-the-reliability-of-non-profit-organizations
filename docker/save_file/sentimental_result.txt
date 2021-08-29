@@ -1,2 +1,1 @@
 positive
-'Hello is sentimental!'
