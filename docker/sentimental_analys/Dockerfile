@@ -3,9 +3,11 @@ FROM ubuntu:18.04
 COPY text.txt /.
 COPY dockerpip.txt /.
 COPY sentimentalanls.py /.
-COPY /models_deeppavlov/elmo_ru-twitter_2013-01_2018-04_600k_steps.tar.gz /.
-COPY /models_deeppavlov/rusentiment_v10.tar.gz /.
-#WORKDIR ./
+
+# Расскоментрируй!
+#COPY /models_deeppavlov/elmo_ru-twitter_2013-01_2018-04_600k_steps.tar.gz /.
+#COPY /models_deeppavlov/rusentiment_v10.tar.gz /.
+
 VOLUME /home/user/src/hackaton_project/Automated-verification-of-the-reliability-of-non-profit-organizations/docker/save_file
 
 RUN apt-get update && apt-get install -y \
