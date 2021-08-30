@@ -1,4 +1,0 @@
-elmo_ru-twitter_2013-01_2018-04_600k_steps.tar.gz
-rusentiment_v10.tar.gz
-
-### This should be references
