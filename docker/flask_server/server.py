@@ -11,12 +11,19 @@ def form_sample():
     """Форма, где пользователь вводит значения..."""
 
     if request.method == 'GET':
+        # Выводим начальную форму
         pass
+        # Пример
         # return render_template('index.html', style_path=url_for('static', filename='css/style.css'),
         #                        text=data.get_text(), question=data.get_question(), answer=data.get_answer(),
         #                        user_name=user_name)
     elif request.method == 'POST':
+        # Получаем данные с формы и производим вычисления и отображаем на форме:
+        # парсим данные
+        # Пропускаем через классификатор -> получаем прогноз
+        # рисуем графики : количество отзывов в сети в виде круговых диаграмм и т.д.
         pass
+        # Пример
         # if request.form.get('accept'):
         #     pass
         # # Получить ответ на вопрос
