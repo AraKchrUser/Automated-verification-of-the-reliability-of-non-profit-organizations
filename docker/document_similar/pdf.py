@@ -4,7 +4,14 @@
 from pdf2image import convert_from_path
 
 pages = convert_from_path('ustav.pdf', 500)
+
+
 import os
+
+if not os.path.exists('docs'):
+    os.makedirs('docs')
+if not os.path.exists('save'):
+    os.makedirs('save')
 
 ustav = ''
 for i, page in enumerate(pages):
