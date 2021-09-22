@@ -1,40 +1,53 @@
 # -*- coding: utf-8 -*-
 
-from flask import Flask, url_for, request, render_template, redirect
+from flask import Flask, request, render_template
+import pandas as pd
+
+from parserbs import get_info
+
 app = Flask(__name__, static_url_path='')
 app.secret_key = "super secret key"
 
 
 @app.route('/', methods=['POST', 'GET'])
 def form_sample():
-    """Форма, где пользователь вводит значения..."""
+    df = pd.read_csv(
+        '/home/user/src/hackaton_project/Automated-verification-of-the-reliability-of-non-profit-organizations/docker/server/preprocessing_data.csv')
+    df.drop(['ИНН'], axis=1, inplace=True)
 
-    if request.method == 'GET':
-        # Выводим начальную форму
-        pass
-        # Пример
-        # return render_template('index.html', style_path=url_for('static', filename='css/style.css'),
-        #                        text=data.get_text(), question=data.get_question(), answer=data.get_answer(),
-        #                        user_name=user_name)
-    elif request.method == 'POST':
-        # Получаем данные с формы и производим вычисления и отображаем на форме:
-        # парсим данные
-        # Пропускаем через классификатор -> получаем прогноз
-        # рисуем графики : количество отзывов в сети в виде круговых диаграмм и т.д.
-        pass
-        # Пример
-        # if request.form.get('accept'):
-        #     pass
-        # # Получить ответ на вопрос
-        # return render_template('index.html', style_path=url_for('static', filename='css/style.css'),
-        #                        text=data.get_text(), question=data.get_question(), answer=data.get_answer(),
-        #                        user_name=user_name)
+    if request.method == 'POST':
+        result = request.form
+        res = get_info(result.get("NKO_name"))
+        print('res: ', res)
+        return render_template("result.html", result = result)
+
+        # for k, v in res.items():
+        #     res[k] = [v]
+        #
+        # from sklearn.linear_model import LogisticRegression
+        # # df1 = pd.DataFrame(res)
+        # # df1['Маил Добро'] = df1['Маил Добро'].apply(lambda x: 0 if x == pd.NaT else 1)
+        # # df1['Нужна помощь'] = df['Нужна помощь'].apply(lambda x: 0 if x == pd.NaT else 1)
+        # # df1['Нужна помощь Фонд'] = df1['Нужна помощь Ссылка'].astype(str).apply(lambda x: 0 if x == 'nan' else float(x))
+        # # df1 = df1[['Наименование', 'Маил Добро', 'Нужна помощь',
+        # #            'Нужна помощь Фонд']].copy()
+        #
+        # # df = pd.concat(df, df1, axis=0)
+        # model = LogisticRegression().fit(df.drop(['Благонадежный (да/нет)'], axis=1), df['Благонадежный (да/нет)'])
+        # print(model.score(df.drop(['Благонадежный (да/нет)'], axis=1), df['Благонадежный (да/нет)']))
     return render_template('index.html')
 
 
 def main():
     app.run(port=8080, host='127.0.0.1')
 
+@app.route('/result',methods = ['POST', 'GET'])
+def result():
+    if request.method == 'POST':
+        result = request.form
+        res = get_info(result.get("NKO_name"))
+        print('res: ', res)
+        return render_template("result.html", res=res)
 
 if __name__ == '__main__':
     main()

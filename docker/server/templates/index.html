@@ -38,7 +38,7 @@
 </div>
 
 
-        <div class="row">
+    <div class="row">
   <div class="col-6 col-md-6">
 Создание шаблона Отчета
   </div>
@@ -301,49 +301,46 @@
 
 
 
-<form>
+<form action = "/result" method="POST">
   <div class="row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="Наименование НКО">
+      <input name = "NKO_name" type="text" class="form-control" placeholder="Наименование НКО">
     </div>
 
+  </div>
+  <!--<div class="row">
+    <div class="col">
+      <input name ="INN" type="text" class="form-control" placeholder="ИНН / ОГРН">
+    </div>
+
+  </div>-->
+<br>
+  <div class="row">
+    <div class="col">
+      <input name = "site" type="text" class="form-control" placeholder="ссылка на сайт">
+    </div>
+  </div>
+
+<br>
+  <div class="row">
+    <div class="col">
+      <input name ="VK" type="text" class="form-control" placeholder="@usernsme_primer_VK">
+    </div>
   </div>
 <br>
-      <div class="row">
+  <div class="row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="ИНН / ОГРН">
+      <input name = "inst" type="text" class="form-control" placeholder="@username Instagram">
     </div>
-
   </div>
 <br>
-      <div class="row">
+  <div class="row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="ссылка на сайт">
+      <input name ="FB" type="text" class="form-control" placeholder="@username  FB">
     </div>
-
   </div>
 <br>
-      <div class="row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="@usernsme_primer_VK">
-    </div>
-
-  </div>
-    <br>
-      <div class="row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="@username Instagram">
-    </div>
-
-  </div>
-<br>
-      <div class="row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="@username  FB">
-    </div>
-
-  </div>
-    <br>
+    <div class="col-6 col-md-1"><button type="submit" class="btn btn-primary btn-lg" >Проверить</button></div>
 
 </form>
 
@@ -356,8 +353,6 @@
     </div>
 
   </div>
-
-           <center><div class="col-6 col-md-1"><button type="button" class="btn btn-primary btn-lg" >Проверить</button></div></center>
 </div>
       <br>
 
