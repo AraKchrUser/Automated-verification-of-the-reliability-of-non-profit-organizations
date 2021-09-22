@@ -51,6 +51,7 @@ jupyterlab-pygments==0.1.2
 jupyterlab-widgets==1.0.0
 Keras-Applications==1.0.8
 Keras-Preprocessing==1.1.2
+lxml==4.6.3
 Markdown==3.3.4
 MarkupSafe==2.0.1
 mistune==0.8.4

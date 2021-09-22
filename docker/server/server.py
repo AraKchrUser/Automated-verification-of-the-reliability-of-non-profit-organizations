@@ -11,9 +11,9 @@ app.secret_key = "super secret key"
 
 @app.route('/', methods=['POST', 'GET'])
 def form_sample():
-    df = pd.read_csv(
-        '/home/user/src/hackaton_project/Automated-verification-of-the-reliability-of-non-profit-organizations/docker/server/preprocessing_data.csv')
-    df.drop(['ИНН'], axis=1, inplace=True)
+    # df = pd.read_csv(
+    #     '/home/user/src/hackaton_project/Automated-verification-of-the-reliability-of-non-profit-organizations/docker/server/preprocessing_data.csv')
+    # df.drop(['ИНН'], axis=1, inplace=True)
 
     if request.method == 'POST':
         result = request.form

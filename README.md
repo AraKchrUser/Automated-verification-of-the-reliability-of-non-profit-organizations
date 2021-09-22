@@ -11,3 +11,15 @@
 - sentimental_analys (анализ тональности по новостям и отзывам)
 - summarization (аннотирование больших документов новостей, т.е. извлчение наибоее важной информации из 
 текста с помощью нейросетей)
+
+
+Для запуска приложения необходимо запустить файл **Automated-verification-of-the-reliability-of-non-profit-organizations/docker/server/server.py**
+
+Если галочки на проставлять, то программа автоматичски будет производить парсинг по определенным параметрам.
+После этого откроется отдельная форма с результатами
+
+![alt text](1.png "Title")
+![alt text](2.png "Title")
+![alt text](3.png "Title")
+![alt text](4.png "Title")
+![alt text](5.png "Title")
